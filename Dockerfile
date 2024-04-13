@@ -26,7 +26,7 @@ ARG EMULATOR_PACKAGE="system-images;${ANDROID_API_LEVEL};${ANDROID_APIS}"
 ARG PLATFORM_VERSION="platforms;${ANDROID_API_LEVEL}"
 ARG BUILD_TOOL="build-tools;${BUILD_TOOLS}"
 ARG ANDROID_CMD="commandlinetools-linux-11076708_latest.zip"
-ARG ANDROID_SDK_PACKAGES="${EMULATOR_PACKAGE} ${PLATFORM_VERSION} ${BUILD_TOOL} platform-tools"
+ARG ANDROID_SDK_PACKAGES="${EMULATOR_PACKAGE} ${PLATFORM_VERSION} ${BUILD_TOOL} platform-tools emulator"
 
 #==============================
 # Set JAVA_HOME - SDK
@@ -73,7 +73,6 @@ RUN curl -sL https://deb.nodesource.com/setup_20.x | bash && \
     apt-get clean && \
     rm -Rf /tmp/* && rm -Rf /var/lib/apt/lists/*
 
-
 #===================
 # Alias
 #===================
@@ -81,7 +80,6 @@ ENV EMU=./start_emu.sh
 ENV EMU_HEADLESS=./start_emu_headless.sh
 ENV VNC=./start_vnc.sh
 ENV APPIUM=./start_appium.sh
-
 
 #===================
 # Ports

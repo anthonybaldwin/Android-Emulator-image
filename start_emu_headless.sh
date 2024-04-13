@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 BL='\033[0;34m'
 G='\033[0;32m'

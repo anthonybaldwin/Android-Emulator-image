@@ -1,4 +1,3 @@
-version: "4"
 services:
 # Launch emulator and appium instance
   android-service:

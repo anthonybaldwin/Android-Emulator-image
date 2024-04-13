@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 readonly G_LOG_I='[INFO]'
 readonly G_LOG_W='[WARN]'
